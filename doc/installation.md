@@ -42,6 +42,7 @@ Then you just want to connect to localhost:80 and use the password shown in the 
 
 ## Some resources
 [Berkley lab 1](https://inst.eecs.berkeley.edu/~cs250/fa20/labs/lab1/)
+
 [Guide to Magic](https://lootr5858.wordpress.com/2020/10/06/magic-vlsi-skywater-pdk-local-installation-guide/)
 
 
