@@ -45,6 +45,22 @@ Then you just want to connect to localhost:80 and use the password shown in the 
 
 [Guide to Magic](https://lootr5858.wordpress.com/2020/10/06/magic-vlsi-skywater-pdk-local-installation-guide/)
 
+## Videos
+[Make a hierarchical design with Magic for Skywater sky130 process](https://www.youtube.com/watch?v=RPppaGdjbj0)
+
+[Terminology and details about the overall process: remoticon 2020](https://www.youtube.com/watch?v=lq2BpWwcyQM)
+
+
+
+### Magic Classes by Efabless
+[Tutorial 1](https://www.youtube.com/watch?v=ORw5OaY33A4): Basics
+
+[Tutorial 2](https://www.youtube.com/watch?v=NUahmUtY814): Cells
+
+[Tutorial 3](https://www.youtube.com/watch?v=OKWM1D0_fPI): Parametrization
+
+[Whole Efabless channel with all videos](https://www.youtube.com/c/efabless_channel/videos): they inlude system design simulation etc...
+
 
 ## NIST Cryogenic tests
 git clone https://github.com/msaligane/openfasoc_cryo_caravel
