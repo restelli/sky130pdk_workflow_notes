@@ -7,7 +7,8 @@ There are two alternatives:
 
 ## PDK content
 
-[Detailed datasheet of each primitive cell in PDK sky130](https://antmicro-skywater-pdk-docs.readthedocs.io/en/test-submodules-in-rtd/contents.html)
+[some info about primitive cells for sky130 (mos and other fundamental devices)](https://diychip.org/sky130/sky130_fd_pr/cells/)
+[Detailed datasheet of each digital primitive cell in PDK sky130](https://antmicro-skywater-pdk-docs.readthedocs.io/en/test-submodules-in-rtd/contents.html)
 
 
 ## Introductory material to get started
