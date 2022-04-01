@@ -5,7 +5,11 @@ There are two alternatives:
 [Open Shuttle progam](https://efabless.com/open_shuttle_program) that is free
 [Chip ignite](https://efabless.com/) that has 4 yearly tapeout dates.
 
+## PDK content
 
-## Introductory material
+[Detailed datasheet of each primitive cell in PDK sky130](https://antmicro-skywater-pdk-docs.readthedocs.io/en/test-submodules-in-rtd/contents.html)
+
+
+## Introductory material to get started
 The following page to get started:
 [Installation and resources](./doc/installation.md)
