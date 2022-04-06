@@ -110,10 +110,13 @@ sudo ln -s <sky130A_install_root_dir>/sky130A/libs.tech/magic/* /usr/local/lib/m
 ```
 #cd to your project then:
 
-echo "#!/bin/bash
+cat <<EOT > run_magic
+#!/bin/bash
 export OPENLANE_ROOT=$(pwd)/openlane
 export PDK_ROOT=$(pwd)/pdk
-magic -rcfile $PDK_ROOT/sky130A/libs.tech/sky130A.magicrc" > run_magic
+magic -rcfile $PDK_ROOT/sky130A/libs.tech/sky130A.magicrc
+EOT
+
 chmod +x run_magic
 
 ```
