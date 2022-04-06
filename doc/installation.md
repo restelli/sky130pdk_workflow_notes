@@ -114,7 +114,7 @@ cat <<EOT > run_magic
 #!/bin/bash
 export OPENLANE_ROOT=$(pwd)/openlane
 export PDK_ROOT=$(pwd)/pdk
-magic -rcfile $PDK_ROOT/sky130A/libs.tech/sky130A.magicrc
+magic -rcfile $PDK_ROOT/sky130A/libs.tech/magic/sky130A.magicrc
 EOT
 
 chmod +x run_magic
