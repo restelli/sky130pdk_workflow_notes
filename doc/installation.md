@@ -97,7 +97,7 @@ Follows a failed attempt co compile magic on a Windows 10 machine using WSL
 ```bash
 git clone https://github.com/RTimothyEdwards/magic
 cd magic
-git checkout 8.3.99
+git checkout 8.3.260
 sudo apt-get install gcc xorg libreadline-dev m4 tcsh csh libx11-dev tcl-dev tk-dev libcairo2-dev mesa-common-dev libglu1-mesa-dev libncurses-dev
 ./configure
 make
