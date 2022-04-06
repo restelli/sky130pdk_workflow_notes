@@ -61,6 +61,8 @@ Then you just want to connect to localhost:80 and use the password shown in the 
 
 [Whole Efabless channel with all videos](https://www.youtube.com/c/efabless_channel/videos): they inlude system design simulation etc...
 
+### Other not watched classes about magic
+[To be tested](https://www.youtube.com/watch?v=SK6OysA97wQ)
 
 ## Cryogenic tests
 
