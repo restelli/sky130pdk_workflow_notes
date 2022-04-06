@@ -97,11 +97,39 @@ Follows a failed attempt co compile magic on a Windows 10 machine using WSL
 ```bash
 git clone https://github.com/RTimothyEdwards/magic
 cd magic
-sudo apt install gcc csh xorg libx11-dev libreadline-dev
+git checkout 8.3.99
+sudo apt-get install gcc xorg libreadline-dev m4 tcsh csh libx11-dev tcl-dev tk-dev libcairo2-dev mesa-common-dev libglu1-mesa-dev libncurses-dev
 ./configure
 make
 sudo make install
 sudo ln -s <sky130A_install_root_dir>/sky130A/libs.tech/magic/* /usr/local/lib/magic/sys/
 ```
+
+## How to initialize a project
+
+```
+#cd to your project then:
+
+echo "#!/bin/bash
+export OPENLANE_ROOT=$(pwd)/openlane
+export PDK_ROOT=$(pwd)/pdk
+magic -rcfile $PDK_ROOT/sky130A/libs.tech/sky130A.magicrc" > run_magic
+chmod +x run_magic
+
+```
+
+Then when you are in your project you can invoke magic with all the correct settings by running:
+
+```
+./run_magic&
+```
+
+
+
+
+
+
+
+
 
 
