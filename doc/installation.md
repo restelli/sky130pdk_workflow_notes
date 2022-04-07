@@ -127,7 +127,19 @@ Then when you are in your project you can invoke magic with all the correct sett
 ./run_magic&
 ```
 
+Before running ./run_magic it is imperative to enable the advanced key bindings. This can be done permanently with the command: 
 
+```
+#We assume that pdk root is in your current folder. If you have set PDK_ROOT don't use the 1st line 
+export PDK_ROOT=$(pwd)/pdk
+sed -i '/BindKeys/s/^#//g' $PDK_ROOT/sky130A/libs.tech/magic/sky130A.magicrc
+```
+
+NOTE: An alternative to enable the Key bindings is to leave the magicrc untouched and run the following command in magic tcl console
+
+```
+source $::env(PDK_ROOT)/sky130A/libs.tech/magic/sky130A-BindKeys
+```
 
 
 
