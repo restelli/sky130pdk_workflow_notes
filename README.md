@@ -15,4 +15,5 @@ There are two alternatives:
 ## Introductory material to get started
 The following page to get started:
 [Installation and resources](./doc/installation.md)
+
 [Magic commands cheatsheet](./doc/magic_cheatsheet.md)
