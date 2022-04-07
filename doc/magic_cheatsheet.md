@@ -39,8 +39,16 @@ On each tool it is possibile to perform a bunch of actions:
 | ARROWS | moving an object|
 |Ctrl-ARROWS| precisely moving by lambda I guess...|
 |d | delete
+|central button|copy material inside box|
+|left and right click on material palette| changes visibility|
 
+### Wiring
 
-
+|Key combination|Action|Notes|
+|---------------|------|-----|
+|Left-clk |starts wire and end tract |
+|drag| lay a piece|
+|right ckick| end wire|
+|u| undo last wire|
 
 
