@@ -45,6 +45,8 @@ Then you just want to connect to localhost:80 and use the password shown in the 
 
 [Guide to Magic](https://lootr5858.wordpress.com/2020/10/06/magic-vlsi-skywater-pdk-local-installation-guide/)
 
+[Extensive Magic documentation and tutorials](http://opencircuitdesign.com/magic/archive/papers/)
+
 ## Videos
 [Make a hierarchical design with Magic for Skywater sky130 process](https://www.youtube.com/watch?v=RPppaGdjbj0)
 
