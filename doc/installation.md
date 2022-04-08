@@ -39,6 +39,30 @@ docker run -it -p 80:80 --name foss_asic --user $(id -u):$(id -g) -v $DESIGNS:/f
 
 Then you just want to connect to localhost:80 and use the password shown in the terminal (abc123). The main example are in /foss You must logout in the virtual desktop to properly remove all the docker containers!
 
+Loooking inside the Docker container the following tools are installed:
+
+- Full PDK Open lane and management core.
+- Magic https://github.com/RTimothyEdwards/magic tag 8.3.260
+- Klayout https://github.com/KLayout/klayout ver. 0.28
+- covered ver. 20090802
+- OSS CVC
+- gaw3-xschem (it is just a waveform viewer) ver 20200922
+- gtkwave
+- irsim ver 9.7.113
+- iverilog Icarus Verilog version 12.0 (devel) (s20150603-1326-g98a87b4-dirty)
+- netgen ver. 1.5.129
+- ngscope ver. 0.9.5
+- ngspice ver. 36
+- openlane
+- openlane-tools
+- opensta
+- risc-gnu-toolchain-rv32i
+- sak (a strange folder full of shell commands involving magic, klayout, openlane and "qflow" that contains vlog2Spice)
+- xchem V3.0.0
+- Xyce DEVELOPMENT-202203032356-(Public_Release-7.4.0-140-g90f4975)-opensource
+
+
+
 
 ## Some resources
 [Berkley lab 1](https://inst.eecs.berkeley.edu/~cs250/fa20/labs/lab1/)
