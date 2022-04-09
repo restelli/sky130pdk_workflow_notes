@@ -17,3 +17,6 @@ The following page to get started:
 [Installation and resources](./doc/installation.md)
 
 [Magic commands cheatsheet](./doc/magic_cheatsheet.md)
+
+## Open Lane full toutorial that includes Magic, floorplanning and meaning of "locali" layer
+[Advanced Physicsl design with OpenLANE](https://github.com/aasthadave9/Advanced-Physical-Design-Using-OpenLANE-Sky130)
