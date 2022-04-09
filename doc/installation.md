@@ -90,6 +90,8 @@ Loooking inside the Docker container the following tools are installed:
 ### Other not watched classes about magic
 [To be tested](https://www.youtube.com/watch?v=SK6OysA97wQ)
 
+[Inverter from scratch (not using wizard)](https://www.youtube.com/watch?v=RPppaGdjbj0)
+
 ## Cryogenic tests
 
 [Mehdi Saligane pubblications](https://scholar.google.com/citations?hl=en&user=u1UAQ2QAAAAJ&view_op=list_works&sortby=pubdate)(University of Michigan) contains a great amount of details about Google Open source PDK project
