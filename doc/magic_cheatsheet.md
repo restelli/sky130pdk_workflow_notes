@@ -34,13 +34,20 @@ On each tool it is possibile to perform a bunch of actions:
 |s | select| select boxes that are part of the design|
 |b | measure box| it is useful to measure part of design. Options>>Window command entry must be checked to use this feature|
 |i | place instance | inserts a cell from file at the location of the current box bottom left corner |
+|ctrl+i| select various levels of hierarchy|
 |g |toggle grid| the [grid command](http://opencircuitdesign.com/magic/commandref/grid.html) has several options "grid box" or "grid what" for example tells what is the current grid size in internal units|
 |c | copy| it takes the current selection and copies it in the current location of the cursor (origin is bottom left point)|
 | ARROWS | moving an object|
 |Ctrl-ARROWS| precisely moving by lambda I guess...|
+|Shift-ARROWS | moves selection but keeps connectivity |
 |d | delete
-|central button|copy material inside box|
+|central button|copy material and paint it inside the box|
 |left and right click on material palette| changes visibility|
+| 1 | Paint metal 1 | Note that the other metals can be invocked with different numbers |
+|Shift-1| Erase metal |Note that the other metals can be invocked with different numbers |
+|Ctrl + p | open the parameter window for the macro cell| For no reason press just p. If p is pressed it messes up the whole cad! (to be investigated) |
+
+
 
 ### Wiring
 
@@ -50,5 +57,6 @@ On each tool it is possibile to perform a bunch of actions:
 |drag| lay a piece|
 |right ckick| end wire|
 |u| undo last wire|
+
 
 
