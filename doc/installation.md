@@ -173,7 +173,9 @@ source $::env(PDK_ROOT)/sky130A/libs.tech/magic/sky130A-BindKeys
 # Installing phidl
 
 ```
+sudo apt install python3-pip
 pip install -U phidl
+sudo apt install jupyter-core jupyter-notebook  
 ```
 
 
