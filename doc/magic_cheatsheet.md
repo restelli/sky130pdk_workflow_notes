@@ -1,9 +1,15 @@
 # Magic layout editor cheatsheet
 ## Window menu
 - Set grid: important to use this tool often to work with a sane grid every time. By default Sky130 rc file sets a small grid
-
 ## Cell Menu
 - Place Instance (inserts a cell from file at the location of the current box bottom left corner)
+
+
+## Useful commands
+
+- **snap user | internal | lambda** : choses the correct snap. The default is "internal" 
+- **cif see \<layer\>** : shows the actual technological mask selected within the selection box
+
 
 ## Spacebar
 The spacebar changes the mode of operation across these modes (or more precisely Tools):
@@ -57,6 +63,9 @@ On each tool it is possibile to perform a bunch of actions:
 |drag| lay a piece|
 |right ckick| end wire|
 |u| undo last wire|
+|Shift+LeftClick and Shift+rightClick| Places a via and let me go to the next layer up or down| Super useful|
+
+
 
 
 
