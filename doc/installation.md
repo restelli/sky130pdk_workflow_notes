@@ -170,6 +170,56 @@ source $::env(PDK_ROOT)/sky130A/libs.tech/magic/sky130A-BindKeys
 ```
 
 
+# Installing phidl
+
+```
+pip install -U phidl
+```
+
+
+
+
+# Installing conda
+
+```bash
+pushd .
+mkdir conda_installation
+cd conda_installation
+wget https://repo.anaconda.com/miniconda/Miniconda3-py39_4.11.0-Linux-x86_64.sh
+echo 4ee9c3aa53329cd7a63b49877c0babb49b19b7e5af29807b793a76bdb1d362b4 Miniconda3-py39_4.11.0-Linux-x86_64.sh >miniconda_hash
+sha256sum -c  miniconda_hash && chmod +x ./Miniconda3-py39_4.11.0-Linux-x86_64.sh && ./Miniconda3-py39_4.11.0-Linux-x86_64.sh -b
+~/miniconda/bin/conda init bash
+popd
+rm -r conda_installation
+```
+
+then restart the shell and
+
+```
+conda config --set auto_activate_base false
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
