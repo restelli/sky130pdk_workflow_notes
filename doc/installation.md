@@ -144,6 +144,11 @@ NOTE: An alternative to enable the Key bindings is to leave the magicrc untouche
 source $::env(PDK_ROOT)/sky130A/libs.tech/magic/sky130A-BindKeys
 ```
 
+# Installing xschem
+
+ sudo apt install libx11-dev libxrender1 libxrender-dev libxcb1 libx11-xcb-dev libcairo2 libcairo2-dev tcl8.6 tcl8.6-dev tk8.6 tk8.6-dev flex bison libxpm4 libxpm-dev
+
+
 
 # Installing phidl
 
