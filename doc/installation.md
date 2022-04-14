@@ -1,33 +1,6 @@
 ### Create project
 
-```bash
-export PROJECT_NAME=fancy_project
-git clone https://github.com/efabless/caravel_user_project $PROJECT_NAME
-cd $PROJECT_NAME
-git remote rename origin upstream
-apt-get install make
-make install
-```
-
-### Install management core
-
-```bash
-make install_mcw
-```
-
-### Install openlane
-
-```bash
-export OPENLANE_ROOT=$(pwd)/openlane
-make openlane
-```
-
-### Install Sky130 PDK
-
-```bash
-export PDK_ROOT=$(pwd)/pdk
-make pdk
-```
+Follow the instructions in caravel user project [quickstart](https://github.com/efabless/caravel_user_project/blob/main/docs/source/quickstart.rst)
 
 ## Trying out the full development system with the docker image
 
