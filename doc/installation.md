@@ -144,21 +144,86 @@ NOTE: An alternative to enable the Key bindings is to leave the magicrc untouche
 source $::env(PDK_ROOT)/sky130A/libs.tech/magic/sky130A-BindKeys
 ```
 
-# Installing xschem
+## Installing xschem
 
- sudo apt install libx11-dev libxrender1 libxrender-dev libxcb1 libx11-xcb-dev libcairo2 libcairo2-dev tcl8.6 tcl8.6-dev tk8.6 tk8.6-dev flex bison libxpm4 libxpm-dev
+```
+ git clone https://github.com/StefanSchippers/xschem
+ cd xschem
+ sudo apt install libx11-dev libxrender1 libxrender-dev
+ sudo apt install libxcb1 libx11-xcb-dev libcairo2 libcairo2-dev
+ sudo apt install tcl8.6 tcl8.6-dev tk8.6 tk8.6-dev
+ sudo apt install flex bison libxpm4 libxpm-dev
+ ./configure
+ make -j$(nproc)
+ sudo make install
+ cd ..
+```
+In order to have xschem working correctly for Skywater PDK it is necessary to copy the xschemrc file from skywater pdk.
+That can be accomplished (once you are into your project folder) by the command:
+
+```
+cp $PDK_ROOT/sky130A/libs.tech/xschem/xschemrc .
+```
+
+Another important configuration file that is necessary is the
+
+The manual for Xschem is on [this link](http://repo.hu/projects/xschem/xschem_man/xschem_man.html)
+
+A good tutorial is [this](https://github.com/bluecmd/learn-sky130/blob/main/schematic/xschem/getting-started.md)
+
+
+ ## Installing  gaw
+
+```
+git clone https://github.com/StefanSchippers/xschem-gaw
+sudo apt install automake-1.15
+sudo apt install gettext
+sudo apt install libgtk-3-dev
+cd xschem-gaw
+aclocal && automake --add-missing && autoconf
+./configure
+make
+sudo make install
+```
+
+If the process does not work please refer to [This issue](https://github.com/StefanSchippers/xschem-gaw/issues/7)
+
+Then you need to run gaw once
+
+```
+gaw
+```
+
+After that you have to edit  ~/.gaw/gawrc and change `up_listenPort = 0` to `up_listenPort = 2020`
+
+This enables the communication between xschem and gaw
 
 
 
-# Installing phidl
+## install gtkwave
+
+```
+sudo apt install gtkwave
+```
+
+
+## Installing ngspice
+
+
+```
+
+sudo apt install libtool
+sudo apt install libxaw7-dev
+
+
+
+# Installing phidl and jupyter notebook
 
 ```
 sudo apt install python3-pip
 pip install -U phidl
 sudo apt install jupyter-core jupyter-notebook  
 ```
-
-
 
 
 # Installing conda
