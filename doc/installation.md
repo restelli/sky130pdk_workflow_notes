@@ -169,7 +169,18 @@ Another important configuration file that is necessary is the
 
 The manual for Xschem is on [this link](http://repo.hu/projects/xschem/xschem_man/xschem_man.html)
 
-A good tutorial is [this](https://github.com/bluecmd/learn-sky130/blob/main/schematic/xschem/getting-started.md)
+A good tutorial for how to get started with Xschem for simulations is [this fantastic tutorial](https://github.com/bluecmd/learn-sky130/blob/main/schematic/xschem/getting-started.md).
+
+After installing gaw and ngspice the ["this fantastic tutorial"](https://github.com/bluecmd/learn-sky130/blob/main/schematic/xschem/getting-started.md) explains very well how to setup the tools and build a simple inverter.
+Before following the tutorial keep in mind that:
+1) It is not necessary to install the pdk libraries so that step should be skipped
+2) The info about where the libraries are is set by the xschemrc file, in particular:
+```
+SKYWATER_MODELS: $PDK_ROOT/sky130A/libs.tech/ngspice
+SKYWATER_STDCELLS: $PDK_ROOT/sky130A/libs.ref/sky130_fd_sc_hd/spice
+```
+4) Consequently the library to be referenced in the "SPICE" code will be in a different path with respect the one in the example and must be changed.
+5) It is necessary to press the button "netlist" before "simulate" otherwise there could be an error
 
 
  ## Installing  gaw
