@@ -225,7 +225,24 @@ sudo apt install gtkwave
 
 sudo apt install libtool
 sudo apt install libxaw7-dev
+```
 
+## Installing Netgen 1.5 that allows to run `lvs` (Layout v.s. schematic) netlist comparison
+This tool is compatibile with insustry standard tools and fundamental to compare between schematic and layout implementations.
+
+```
+git clone https://github.com/RTimothyEdwards/netgen
+# Next line is maybe optional since Netgen is currently in active development therefore it is probably ok to get the latest version
+git tag 1.5.221
+cd netgen
+./configure
+make
+sudo make config
+```
+
+To check a layout agains a schematic the information can be found a [this](https://youtu.be/NCaNF4EunYU?t=203) tutorial. Note that you can skip the installation instructions since you did install netgen here.
+
+To invoke netgen you can use the options `-batch` and `-noconsole`. When `-batch` is invoqued also `-noconsole` option is activated.
 
 
 # Installing phidl and jupyter notebook
