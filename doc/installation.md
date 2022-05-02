@@ -222,9 +222,14 @@ sudo apt install gtkwave
 
 
 ```
-
 sudo apt install libtool
 sudo apt install libxaw7-dev
+git clone git://git.code.sf.net/p/ngspice/ngspice
+cd ngspice/
+git checkout ngspice-36
+
+
+###
 ```
 
 ## Installing Netgen 1.5 that allows to run `lvs` (Layout v.s. schematic) netlist comparison
@@ -233,8 +238,8 @@ This tool is compatibile with insustry standard tools and fundamental to compare
 ```
 git clone https://github.com/RTimothyEdwards/netgen
 # Next line is maybe optional since Netgen is currently in active development therefore it is probably ok to get the latest version
-git tag 1.5.221
 cd netgen
+git checkout 1.5.221
 ./configure
 make
 sudo make config
