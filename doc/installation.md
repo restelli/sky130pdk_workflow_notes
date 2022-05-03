@@ -120,10 +120,10 @@ Then when you are in your project you can invoke magic with all the correct sett
 ./run_magic&
 ```
 
-Before running ./run_magic it is imperative to enable the advanced key bindings. This can be done permanently with the command: 
+Before running ./run_magic it is imperative to enable the advanced key bindings. This can be done permanently with the command:
 
 ```
-#We assume that pdk root is in your current folder. If you have set PDK_ROOT don't use the 1st line 
+#We assume that pdk root is in your current folder. If you have set PDK_ROOT don't use the 1st line
 export PDK_ROOT=$(pwd)/pdk
 sed -i '/BindKeys/s/^#//g' $PDK_ROOT/sky130A/libs.tech/magic/sky130A.magicrc
 ```
@@ -235,11 +235,24 @@ make
 sudo make config
 ```
 
-To check a layout agains a schematic the information can be found a [this](https://youtu.be/NCaNF4EunYU?t=203) tutorial. Note that you can skip the installation instructions since you did install netgen here.
+To check a layout against a schematic the information can be found a [this](https://youtu.be/NCaNF4EunYU?t=203) tutorial. Note that you can skip the installation instructions since you did install netgen here.
 
 To invoke netgen you can use the options `-batch` and `-noconsole`. When `-batch` is invoqued also `-noconsole` option is activated.
 
 # Installing Klayout
+The installation of the very last version is very very long! The time it takes to compile everything is SEVERAL HOURS!!!.
+
+```
+git clone https://github.com/KLayout/klayout
+cd klayout/
+sudo apt install qt5-qmake qt5-default libqt5svg5* libqt5designer*
+sudo apt install libqt5multimedia5
+sudo apt install qtmultimedia5-dev libqt5multimediawidgets5 libqt5multimedia5-plugins libqt5multimedia5
+sudo apt install qttools5-dev
+sudo apt install libqt5xmlpatterns5-dev
+./build.sh - -python $(which python)
+```
+The quickest way would be to download from [klayout website](https://www.klayout.de/build.html) and install.
 
 
 # Installing phidl and jupyter notebook
