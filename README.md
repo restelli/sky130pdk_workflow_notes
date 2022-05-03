@@ -2,6 +2,7 @@
 These are my personal notes that I have accumulated during my fist project with foss tools using Skywater sky 130 PDK and efabless.
 
 There are two alternatives:
+
 [Open Shuttle progam](https://efabless.com/open_shuttle_program) that is free
 [Chip ignite](https://efabless.com/) that has 4 yearly tapeout dates.
 
@@ -13,10 +14,13 @@ There are two alternatives:
 
 
 ## Introductory material to get started
-The following page to get started:
-[Installation and resources](./doc/installation.md)
+The following page to get started and install everything:
+
+[Installation](./doc/installation.md)
 
 [Magic commands cheatsheet](./doc/magic_cheatsheet.md)
+
+[Useful resources](./doc/Resources.md)
 
 ## Open Lane full toutorial that includes Magic, floorplanning and meaning of "locali" layer
 [Advanced Physicsl design with OpenLANE](https://github.com/aasthadave9/Advanced-Physical-Design-Using-OpenLANE-Sky130)
