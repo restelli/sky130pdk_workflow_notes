@@ -4,7 +4,43 @@ START DOCKER!!!!!
 
 Follow the instructions in caravel user project [quickstart](https://github.com/efabless/caravel_user_project/blob/main/docs/source/quickstart.rst)
 
+after this you can jump directly to [**Trying out the full development system with the docker image**](#Trying-out-the-full-development-system-with-the-docker-image)
+
+Alternatively use the following instructions that worked better for me.
+
+```bash
+export PROJECT_NAME=fancy_project
+git clone https://github.com/efabless/caravel_user_project $PROJECT_NAME
+cd $PROJECT_NAME
+git remote rename origin upstream
+apt-get install make
+make install
+```
+
+### Install management core
+
+```bash
+make install_mcw
+```
+
+### Install openlane
+
+```bash
+export OPENLANE_ROOT=$(pwd)/openlane
+make openlane
+```
+
+### Install Sky130 PDK
+
+```bash
+export PDK_ROOT=$(pwd)/pdk
+make pdk
+```
+
 ## Trying out the full development system with the docker image
+
+This is not necessary if you are planning to install your applications in your Linux system.
+In case you don't want to try out the docker image just jump [here](#Magic-source-compiling-under-Windows-WSL)
 
 ```
 docker pull efabless/foss-asic-tools:latest
@@ -35,52 +71,6 @@ Loooking inside the Docker container the following tools are installed:
 - sak (a strange folder full of shell commands involving magic, klayout, openlane and "qflow" that contains vlog2Spice)
 - xchem V3.0.0
 - Xyce DEVELOPMENT-202203032356-(Public_Release-7.4.0-140-g90f4975)-opensource
-
-
-
-
-## Some resources
-[Berkley lab 1](https://inst.eecs.berkeley.edu/~cs250/fa20/labs/lab1/)
-
-[Guide to Magic](https://lootr5858.wordpress.com/2020/10/06/magic-vlsi-skywater-pdk-local-installation-guide/)
-
-[Extensive Magic documentation and tutorials](http://opencircuitdesign.com/magic/archive/papers/)
-
-## Videos
-[Make a hierarchical design with Magic for Skywater sky130 process](https://www.youtube.com/watch?v=RPppaGdjbj0)
-
-[Terminology and details about the overall process: remoticon 2020](https://www.youtube.com/watch?v=lq2BpWwcyQM)
-
-
-
-### Magic Classes by Efabless
-[Tutorial 1](https://www.youtube.com/watch?v=ORw5OaY33A4): Basics
-
-[Tutorial 2](https://www.youtube.com/watch?v=NUahmUtY814): Cells
-
-[Tutorial 3](https://www.youtube.com/watch?v=OKWM1D0_fPI): Parametrization
-
-[Whole Efabless channel with all videos](https://www.youtube.com/c/efabless_channel/videos): they inlude system design simulation etc...
-
-### Other not watched classes about magic
-[To be tested](https://www.youtube.com/watch?v=SK6OysA97wQ)
-
-[Inverter from scratch (not using wizard)](https://www.youtube.com/watch?v=RPppaGdjbj0)
-
-## Cryogenic tests
-
-[Mehdi Saligane pubblications](https://scholar.google.com/citations?hl=en&user=u1UAQ2QAAAAJ&view_op=list_works&sortby=pubdate)(University of Michigan) contains a great amount of details about Google Open source PDK project
-
-The project for characterizing mos at cryogenic temperatures is here
-
-```bash
-git clone https://github.com/msaligane/openfasoc_cryo_caravel
-cd openfasoc_cryo_caravel/gds
-magic -T sky130A user_analog_project_wrapper.gds
-```
-
-
-
 
 ### Cleanup in case you forgot to close the virtual machine
 for i in $(docker ps -q); do docker stop $i; done
@@ -249,6 +239,8 @@ To check a layout agains a schematic the information can be found a [this](https
 
 To invoke netgen you can use the options `-batch` and `-noconsole`. When `-batch` is invoqued also `-noconsole` option is activated.
 
+# Installing Klayout
+
 
 # Installing phidl and jupyter notebook
 
@@ -278,31 +270,3 @@ then restart the shell and
 ```
 conda config --set auto_activate_base false
 ```
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
