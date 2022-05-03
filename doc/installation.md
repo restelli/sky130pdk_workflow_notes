@@ -251,8 +251,18 @@ sudo apt install qtmultimedia5-dev libqt5multimediawidgets5 libqt5multimedia5-pl
 sudo apt install qttools5-dev
 sudo apt install libqt5xmlpatterns5-dev
 ./build.sh - -python $(which python)
+echo '#!/bin/bash' > klayout
+echo  'LD_LIBRARY_PATH=$LD_LIBRARY_PATH':$(pwd)/bin-release ';' $(pwd)/bin-release/klayout '"$@"' >> klayout
+chmod +x klayout
+sudo ln klayout /usr/bin/klayout
+rm -rf build-release #This frees all space used during the building process (better running this after testing klayout)
 ```
-The quickest way would be to download from [klayout website](https://www.klayout.de/build.html) and install.
+
+The commands after `./build.sh` do a link-based installation of klayout since it seems that there is no Makefile target **install** available.
+
+Instead of copying over the libraries to /usr/lib I create a script on klayout main git repository folder that initialize on the fly the `LD_LIBRARY_PATH` environmental variable and calls klayout binary. To make sure that  
+
+The quickest way would be to download from [klayout website](https://www.klayout.de/build.html) and install, however at the moment I'm writing this post the current version is 0.27 and not 0.28 as it is installed in the pre-built image I have inspected.
 
 
 # Installing phidl and jupyter notebook
