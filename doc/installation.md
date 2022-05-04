@@ -252,7 +252,7 @@ sudo apt install qttools5-dev
 sudo apt install libqt5xmlpatterns5-dev
 ./build.sh - -python $(which python)
 echo '#!/bin/bash' > klayout
-echo  'LD_LIBRARY_PATH=$LD_LIBRARY_PATH':$(pwd)/bin-release ';' $(pwd)/bin-release/klayout '"$@"' >> klayout
+echo  export 'LD_LIBRARY_PATH=$LD_LIBRARY_PATH':$(pwd)/bin-release ';' $(pwd)/bin-release/klayout '"$@"' >> klayout
 chmod +x klayout
 sudo ln klayout /usr/bin/klayout
 rm -rf build-release #This frees all space used during the building process (better running this after testing klayout)
