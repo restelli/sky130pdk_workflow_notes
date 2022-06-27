@@ -16,7 +16,7 @@ There are two alternatives:
 ## Introductory material to get started
 The following page to get started and install everything:
 
-[Installation](./doc/installation.md)
+[Installation](./doc/installation.md) (and alternative installation by [Anthony Wall](https://anthonywall.ie/opentools/))
 
 [Magic commands cheatsheet](./doc/magic_cheatsheet.md)
 
