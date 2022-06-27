@@ -42,6 +42,35 @@ make pdk
 This is not necessary if you are planning to install your applications in your Linux system.
 In case you don't want to try out the docker image just jump [here](#Magic-source-compiling-under-Windows-WSL)
 
+NEW PROCEDURE FOR DOCKER FULL DEVELOPMENT:
+
+Use cmd or git bash, not WSL ubuntu!
+
+```
+git clone https://github.com/hpretl/iic-osic-tools.git
+cd iic-osic-tools
+SET DESIGNS=<\the\folder\you\want\to\share\with\docker\>
+.\start_x.bat
+```
+
+After that you can run the container from Docker Desktop!
+
+
+THE FOLLOWING DOES NOT WORK YET therefore skip to [here](#Magic-source-compiling-under-Windows-WSL):
+Gather some information. for example `strace -e connect xlogo` to figure out where the xsocket is in your system.
+For example in ubuntu for WSL `XSOCK=/var/run/nscd/socket`.
+Also chose your project folder so that the docker will have access to the folder under "
+
+```
+git clone https://github.com/hpretl/iic-osic-tools.git
+cd iic-osic-tools
+export XSOCK=/var/run/nscd/socket
+export DESIGNS=/<your project folder>
+./start_x.sh
+```
+
+
+DEPRECATED:
 ```
 docker pull efabless/foss-asic-tools:latest
 export DESIGNS=$(pwd)
