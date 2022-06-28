@@ -37,48 +37,6 @@ export PDK_ROOT=$(pwd)/pdk
 make pdk
 ```
 
-## Trying out the full development system with the docker image
-
-This is not necessary if you are planning to install your applications in your Linux system.
-In case you don't want to try out the docker image just jump [here](#Magic-source-compiling-under-Windows-WSL)
-
-NEW PROCEDURE FOR DOCKER FULL DEVELOPMENT:
-
-Use cmd or git bash, not WSL ubuntu!
-
-```
-git clone https://github.com/hpretl/iic-osic-tools.git
-cd iic-osic-tools
-SET DESIGNS=<\the\folder\you\want\to\share\with\docker\>
-.\start_x.bat
-```
-
-After that you can run the container from Docker Desktop!
-
-
-THE FOLLOWING DOES NOT WORK YET therefore skip to [here](#Magic-source-compiling-under-Windows-WSL):
-Gather some information. for example `strace -e connect xlogo` to figure out where the xsocket is in your system.
-For example in ubuntu for WSL `XSOCK=/var/run/nscd/socket`.
-Also chose your project folder so that the docker will have access to the folder under "
-
-```
-git clone https://github.com/hpretl/iic-osic-tools.git
-cd iic-osic-tools
-export XSOCK=/var/run/nscd/socket
-export DESIGNS=/<your project folder>
-./start_x.sh
-```
-
-
-DEPRECATED:
-```
-docker pull efabless/foss-asic-tools:latest
-export DESIGNS=$(pwd)
-docker run -it -p 80:80 --name foss_asic --user $(id -u):$(id -g) -v $DESIGNS:/foss/designs efabless/foss-asic-tools:latest bash
-```
-
-Then you just want to connect to localhost:80 and use the password shown in the terminal (abc123). The main example are in /foss You must logout in the virtual desktop to properly remove all the docker containers!
-
 Loooking inside the Docker container the following tools are installed:
 
 - Full PDK Open lane and management core.
@@ -322,3 +280,48 @@ then restart the shell and
 ```
 conda config --set auto_activate_base false
 ```
+
+
+
+## Trying out the full development system with the docker image
+
+This is not necessary if you are planning to install your applications in your Linux system.
+In case you don't want to try out the docker image just jump [here](#Magic-source-compiling-under-Windows-WSL)
+
+NEW PROCEDURE FOR DOCKER FULL DEVELOPMENT:
+
+Use cmd or git bash, not WSL ubuntu!
+
+```
+git clone https://github.com/hpretl/iic-osic-tools.git
+cd iic-osic-tools
+SET DESIGNS=<\the\folder\you\want\to\share\with\docker\>
+.\start_x.bat
+```
+
+After that you can run the container from Docker Desktop!
+
+
+THE FOLLOWING DOES NOT WORK YET therefore skip to [here](#Magic-source-compiling-under-Windows-WSL):
+Gather some information. for example `strace -e connect xlogo` to figure out where the xsocket is in your system.
+For example in ubuntu for WSL `XSOCK=/var/run/nscd/socket`.
+Also chose your project folder so that the docker will have access to the folder under "
+
+```
+git clone https://github.com/hpretl/iic-osic-tools.git
+cd iic-osic-tools
+export XSOCK=/var/run/nscd/socket
+export DESIGNS=/<your project folder>
+./start_x.sh
+```
+
+
+DEPRECATED:
+```
+docker pull efabless/foss-asic-tools:latest
+export DESIGNS=$(pwd)
+docker run -it -p 80:80 --name foss_asic --user $(id -u):$(id -g) -v $DESIGNS:/foss/designs efabless/foss-asic-tools:latest bash
+```
+
+Then you just want to connect to localhost:80 and use the password shown in the terminal (abc123). The main example are in /foss You must logout in the virtual desktop to properly remove all the docker containers!
+
