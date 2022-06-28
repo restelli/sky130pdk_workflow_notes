@@ -20,7 +20,7 @@ The default working folder will be `%USERPROFILE%\eda\designs` that is not such 
 Then the suggested installation is simply running the following: 
 
 ```
-curl.exe -o install-sky.bat https://raw.githubusercontent.com/restelli/sky130pdk_workflow_notes/main/scripts/install.bat; .\install-sky.bat; rm .\install-sky.bat
+curl.exe -o install-sky.bat https://raw.githubusercontent.com/restelli/sky130pdk_workflow_notes/main/scripts/install.bat ; .\install-sky.bat ; rm .\install-sky.bat
 ```
 
 After this installation every time you want to call the developement environment you have to run:
