@@ -16,7 +16,11 @@ There are two alternatives:
 ## Introductory material to get started
 The following page to get started and install everything:
 
-[Installation](./doc/installation.md) (and alternative installation by [Anthony Wall](https://anthonywall.ie/opentools/))
+[Installation instructions](./doc/installation_manual.md) (and alternative installation by [Anthony Wall](https://anthonywall.ie/opentools/))
+
+[Installation of Docker image version](./doc/installation_docker.md)
+
+[Analog design tutorial by Thomas parry](https://youtu.be/qABMStGDCTU?t=1135) Note that it starts at 18':45''
 
 [Magic commands cheatsheet](./doc/magic_cheatsheet.md)
 
