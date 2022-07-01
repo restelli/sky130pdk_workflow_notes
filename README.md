@@ -28,3 +28,6 @@ The following page to get started and install everything:
 
 ## Open Lane full toutorial that includes Magic, floorplanning and meaning of "locali" layer
 [Advanced Physicsl design with OpenLANE](https://github.com/aasthadave9/Advanced-Physical-Design-Using-OpenLANE-Sky130)
+
+## Useful toutorial about Phisical verification
+[Avnish21](https://github.com/Avnish21/VSD-Physical-Verification-Using-Sky130)
