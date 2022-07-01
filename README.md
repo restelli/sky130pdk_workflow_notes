@@ -20,8 +20,6 @@ The following page to get started and install everything:
 
 [Installation of Docker image version](./doc/installation_docker.md)
 
-[Analog design tutorial by Thomas parry](https://youtu.be/qABMStGDCTU?t=1135) Note that it starts at 18':45''
-
 [Magic commands cheatsheet](./doc/magic_cheatsheet.md)
 
 [Useful resources](./doc/Resources.md)
@@ -29,5 +27,3 @@ The following page to get started and install everything:
 ## Open Lane full toutorial that includes Magic, floorplanning and meaning of "locali" layer
 [Advanced Physicsl design with OpenLANE](https://github.com/aasthadave9/Advanced-Physical-Design-Using-OpenLANE-Sky130)
 
-## Useful toutorial about Phisical verification
-[Avnish21](https://github.com/Avnish21/VSD-Physical-Verification-Using-Sky130)
