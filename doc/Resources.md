@@ -1,5 +1,7 @@
 # Some resources
 
+
+
 ## Magic labs
 
 [Berkley lab 1](https://inst.eecs.berkeley.edu/~cs250/fa20/labs/lab1/)
@@ -9,6 +11,9 @@
 [Extensive Magic documentation and tutorials](http://opencircuitdesign.com/magic/archive/papers/)
 
 ## Videos
+
+[Analog design tutorial by Thomas parry](https://youtu.be/qABMStGDCTU?t=1135) Note that it starts at 18':45''
+
 [Make a hierarchical design with Magic for Skywater sky130 process](https://www.youtube.com/watch?v=RPppaGdjbj0)
 
 [Terminology and details about the overall process: remoticon 2020](https://www.youtube.com/watch?v=lq2BpWwcyQM)
@@ -21,6 +26,10 @@
 [Tutorial 3](https://www.youtube.com/watch?v=OKWM1D0_fPI): Parametrization
 
 [Whole Efabless channel with all videos](https://www.youtube.com/c/efabless_channel/videos): they inlude system design simulation etc...
+
+## Useful toutorial about Phisical verification
+[Avnish21](https://github.com/Avnish21/VSD-Physical-Verification-Using-Sky130)
+
 
 ### Other not watched classes about magic
 [To be tested](https://www.youtube.com/watch?v=SK6OysA97wQ)
