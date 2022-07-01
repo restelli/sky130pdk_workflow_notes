@@ -242,12 +242,30 @@ echo '#!/bin/bash' > klayout
 echo  export 'LD_LIBRARY_PATH=$LD_LIBRARY_PATH':$(pwd)/bin-release ';' $(pwd)/bin-release/klayout '"$@"' >> klayout
 chmod +x klayout
 sudo ln klayout /usr/bin/klayout
+echo import pya > install_sky_130_klayout_technology.py
+echo 'pya.Technology.remove_technology("SKY130")' >> install_sky_130_klayout_technology.py
+klayout -e -r install_sky_130_klayout_technology.py
+rm install_sky_130_klayout_technology.py
+cd ..
+git clone https://github.com/laurentc2/SKY130_for_KLayout.git
+# Alternative version that supposidly fixes issues with OpenRam:
+# git clone https://github.com/VLSIDA/SKY130_for_KLayout.git
+cd SKY130_for_KLayout
+mkdir $HOME/.klayout/tech
+mkdir $HOME/.klayout/tech/SKY130
+cp ./SKY130.lyp $HOME/.klayout/tech/SKY130/sky130.lyp
+cp ./SKY130.lyt $HOME/.klayout/tech/SKY130/sky130.lyt
+cp -r ./drc $HOME/.klayout/tech/SKY130
+cp -r ./lvs $HOME/.klayout/tech/SKY130
+cd ..
+
+cd klayout/
 rm -rf build-release #This frees all space used during the building process (better running this after testing klayout)
 ```
 
 The commands after `./build.sh` do a link-based installation of klayout since it seems that there is no Makefile target **install** available.
 
-Instead of copying over the libraries to /usr/lib I create a script on klayout main git repository folder that initialize on the fly the `LD_LIBRARY_PATH` environmental variable and calls klayout binary. To make sure that  
+Instead of copying over the libraries to /usr/lib I create a script on klayout main git repository folder that initialize on the fly the `LD_LIBRARY_PATH` environmental variable and calls klayout binary.
 
 The quickest way would be to download from [klayout website](https://www.klayout.de/build.html) and install, however at the moment I'm writing this post the current version is 0.27 and not 0.28 as it is installed in the pre-built image I have inspected.
 
