@@ -13,4 +13,4 @@ SET DOCKER_USER=--name skywater_dev local
 :: Undouing the hack to avoid side effects
 SET DOCKER_USER=local
 
-rm .\start_x_temp.bat
+del .\start_x_temp.bat
