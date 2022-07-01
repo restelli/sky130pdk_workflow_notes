@@ -258,6 +258,14 @@ cp ./SKY130.lyt $HOME/.klayout/tech/SKY130/sky130.lyt
 cp -r ./drc $HOME/.klayout/tech/SKY130
 cp -r ./lvs $HOME/.klayout/tech/SKY130
 cd ..
+git clone https://github.com/yrrapt/klayout_setup.git
+cd klayout_setup
+mkdir $HOME/.klayout/pymacros
+cp sky130.lym $HOME/.klayout/pymacros
+mv $HOME/.klayout/klayoutrc $HOME/.klayout/klayoutrc_backup
+cp klayoutrc $HOME/.klayout
+cd ..
+
 
 cd klayout/
 rm -rf build-release #This frees all space used during the building process (better running this after testing klayout)
