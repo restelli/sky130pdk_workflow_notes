@@ -9,6 +9,7 @@ USER root
 RUN sed -i '/BindKeys/s/^#//g' $PDK_ROOT/sky130A/libs.tech/magic/sky130A.magicrc && \
     python3 -m pip install --upgrade pip && \
     python3 -m pip install --upgrade Pillow && \
+    python3 -m pip install --upgrade xmltodict && \
     python3 -m pip install --upgrade phidl
 
 
