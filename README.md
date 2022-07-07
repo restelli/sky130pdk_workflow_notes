@@ -12,6 +12,8 @@ There are two alternatives:
 
 [Detailed datasheet of each digital primitive cell in PDK sky130](https://antmicro-skywater-pdk-docs.readthedocs.io/en/test-submodules-in-rtd/contents.html)
 
+[csv file with all layers and descriptions for PDK sky 130 technology](https://antmicro-skywater-pdk-docs.readthedocs.io/en/latest/_downloads/8732cefe49e90050bd82dce54d3aa8dc/gds_layers.csv)
+
 
 ## Introductory material to get started
 The following page to get started and install everything:
