@@ -48,4 +48,12 @@ cd openfasoc_cryo_caravel/gds
 magic -T sky130A user_analog_project_wrapper.gds
 ```
 
+## Possibile interesting tools (in development)
+
+[introduction to librecell](https://github.com/BhushanKolhe1920/project_Automated_Circuit_To_VLSI_Layout)
+
+[Librecell project](https://codeberg.org/librecell)
+
+
+
 
